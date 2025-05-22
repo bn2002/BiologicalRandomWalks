@@ -128,7 +128,7 @@ class OntologyGraph():
 	def __save_final_ontology__(self,):
 		
 		annotation_graph = []
-		csv_writer = csv.writer(open(self.output_ontology_network_path, "w"),delimiter = "\t")
+		csv_writer = csv.writer(open(self.output_ontology_network_path, "w", newline=''),delimiter = "\t")
 		csv_writer.writerow(["gene_id","term_id","DB"])
 
 		for k,v in self.map__ensembl_id__gene_ontologies.items():
@@ -136,7 +136,6 @@ class OntologyGraph():
 				
 				ontology_id, DB = record
 				annotation_graph.append([k, ontology_id, DB])
-
 		csv_writer.writerows(annotation_graph)
 
 

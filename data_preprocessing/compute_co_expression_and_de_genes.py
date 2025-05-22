@@ -93,7 +93,7 @@ def create_de_genes(
 
 	filtered_table = [record for record in table if record[1] > mean]
 
-	csv_writer = csv.writer(open(output_file_path, "w"),delimiter = "\t")
+	csv_writer = csv.writer(open(output_file_path, "w", newline=''),delimiter = "\t")
 	csv_writer.writerows(filtered_table)
 
 
@@ -122,7 +122,7 @@ def get_top_correlations(
 		
 	file_name = expression_file_path.split("/")[-1].split("__")[0]
 
-	csv_writer = csv.writer(open(output_file_path,"w"),delimiter = "\t")
+	csv_writer = csv.writer(open(output_file_path,"w", newline=''),delimiter = "\t")
 	co_expression_network = []
 
 	print("computing pearson's correlation coefficients...")

@@ -23,7 +23,6 @@ class DiseaseOntologies():
 
 		with open(self.ontology_graph_file_path,"r") as fp:
 			csv_reader = csv.reader(fp,delimiter= "\t")
-			
 			for index, row in enumerate(csv_reader):
 				if index == 0:
 					continue
@@ -84,7 +83,7 @@ class DiseaseOntologies():
 				disease_ontologies.append([term, db])
 
 
-		csv_writer = csv.writer(open(self.output_file_path,"w"),delimiter = "\t")
+		csv_writer = csv.writer(open(self.output_file_path,"w", newline=''),delimiter = "\t")
 		csv_writer.writerows(disease_ontologies)
 			
 

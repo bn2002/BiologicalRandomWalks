@@ -100,7 +100,7 @@ class TCGAAnalyzer():
 	def __write_table__(self,patient_set,gene_set,map__patient__ensembl_id__expression,project_id,label):
 		M = []
 
-		csv_writer = csv.writer(open(self.output_dir_path + project_id + "__" + label + ".tsv","w"),delimiter = "\t")
+		csv_writer = csv.writer(open(self.output_dir_path + project_id + "__" + label + ".tsv","w", newline=''),delimiter = "\t")
 
 		gene_list = list(gene_set)
 		gene_list.sort()
