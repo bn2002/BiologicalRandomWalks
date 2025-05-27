@@ -1,5 +1,10 @@
 import csv
+import numpy as np
+np.float_ = np.float64
+np.int = np.int64
+
 import networkx as nx
+
 
 class Loader():
 	def __init__(self, 
